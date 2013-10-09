@@ -1,0 +1,722 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Fluid / responsive &middot; Isotope Demo</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="stylesheet" href="css/style2.css" />
+    <!--[if IE]>
+    <style>
+.element .symbol {
+  left: 0.2em;
+  z-index:999999999999999;
+  top: 0.4em;
+  font-weight:none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.0em;
+  color:#000;
+  z-index:9999;
+  background-color: #fff;
+  filter:alpha(opacity=80);
+  
+}
+#options li a.selected {
+  
+  text-shadow: none;
+  color: white;
+  background-color: #e94c4c;
+  
+}
+
+
+.clickable .element:hover {
+
+  z-index:9999;
+  background-color: #fff;
+  filter:alpha(opacity=80);
+}
+
+.clickable .element:hover h2 {
+  color:#000;
+  z-index:999999999999999999999999999;
+   background-color: #fff;
+  filter:alpha(opacity=80);
+  
+}
+
+     </style>
+  <!-- scripts at bottom of page -->
+
+    <script src="http://desandro.com/mint/?script"></script>
+    <!-- analytics -->
+
+</head>
+
+<body class="demos ">
+
+
+
+
+
+
+    <style>
+    /* percentage-based widths for fluid/responsive layout */
+    .element {
+        margin: 15px 3px;
+        width: 18%;
+    }
+}
+#container {
+    padding: 0px 0;
+}
+    </style>
+    <div class="line-separator"></div>
+
+    <br>
+    <img style="z-index:-99999999999;" src="img/ligne.png" />
+
+    <section id="options" class="clearfix">
+
+        <ul id="filters" class="option-set clearfix" data-option-key="filter">
+
+            <li style="background-color:#fff;margin-left:-40px;margin-top:0px;">
+                <big>
+                    <img src="http://cdn5.iconfinder.com/data/icons/windows8_icons/26/empty_filter.png" height="15" />&nbsp;FILTRER &nbsp;&nbsp;&nbsp;&rarr;</big>
+                <a style="background-color:#fff;z-index:999999999999999999999999999999999999999999999;color:#e1005d;" href="#filter" data-option-value="*" class="selected">
+                    <br><u>AFFICHER TOUT</u> 
+                </a>
+            </li>
+            <li style="margin-left:10px;"><a href="#filter" data-option-value=".imp">&nbsp;&nbsp;&nbsp;&nbsp;Impressionnisme&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li style="margin-left:20px;"><a href="#filter" data-option-value=".fauv">&nbsp;&nbsp;&nbsp;&nbsp;Fauvisme / Cubisme&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li style="margin-left:110px;"><a href="#filter" data-option-value=".sura">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expressionnisme abstrait&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li style="margin-left:40px;"><a href="#filter" data-option-value=".con">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Artistes vivants&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <br>
+            <li style="margin-left:100px;"><a href="#filter" data-option-value=".exp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expressionnisme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li style="margin-left:15px;"><a href="#filter" data-option-value=".surr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surréalisme&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li style="margin-left:15px;"><a href="#filter" data-option-value=".pop">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pop art&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+
+            <br>
+            <li style="margin-left:75px;"><a href="#filter" data-option-value=".chi">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peinture chinoise&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+        </ul>
+
+    </section>
+
+    <div id="container" class="clickable variable-sizes clearfix">
+
+
+
+        <div class="element fauv" data-symbol="Hg" data-category="transition">
+            <p class="number">1</p>
+            <h3 class="symbol">&nbsp;#1 Pablo Picasso&nbsp;</h3>
+            <img class="photo" src="img/1.jpg" />
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;1,35 milliard d'euros&nbsp;</h2>
+        </div>
+
+
+
+        <div class="element pop" data-symbol="Te" data-category="metalloid">
+            <p class="number">2</p>
+            <img class="photo" src="img/2.jpg" />
+
+            <h3 class="symbol">&nbsp;#2 Andy Warhol&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;1,31 milliard d'euros&nbsp;</h2>
+        </div>
+
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">3</p>
+            <img class="photo" src="img/3.jpg" />
+
+            <h3 class="symbol">&nbsp;#3 Zhang Da Qian&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;1,21 milliard d'euros&nbsp;</h2>
+        </div>
+
+
+
+        <div class="element chi  " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/4.jpg" />
+
+            <h3 class="symbol">&nbsp;#4 Qi Baishi&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;1,21 milliard d'euros&nbsp;</h2>
+        </div>
+
+
+
+        <div class="element con   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/5.jpg" />
+
+            <h3 class="symbol">&nbsp;#5 Gerard Richter&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;644 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/6.jpg" />
+
+            <h3 class="symbol">&nbsp;#6 Xu Beihong&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;626 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element exp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">1</p>
+            <img class="photo" src="img/7.jpg" />
+
+            <h3 class="symbol">&nbsp;#7 Francis Bacon&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;554 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+
+
+
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/8.jpg" />
+
+            <h3 class="symbol">&nbsp;#8 Fu Baoshi&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;517 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+        <div class="element surr   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/9.jpg" />
+
+            <h3 class="symbol">&nbsp;#9 Alberto Giacometti&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;490 millions d'euros&nbsp;</h2>
+        </div>
+
+
+        <div class="element imp" data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/10.jpg" />
+
+            <h3 class="symbol">&nbsp;#10 Claude Monet&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;484 millions d'euros&nbsp;</h2>
+        </div>
+
+
+        <div class="element fauv   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/11.jpg" />
+
+            <h3 class="symbol">&nbsp;#11 Henri Matisse&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;400 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/12.jpg" />
+
+            <h3 class="symbol">&nbsp;#12 Li Keran&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;396 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/13.jpg" />
+
+            <h3 class="symbol">&nbsp;#13 Wu Guanzhong&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;395 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+        <div class="element pop  " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/14.jpg" />
+
+            <h3 class="symbol">&nbsp;#14 Basquiat&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;376 millions d'euros&nbsp;</h2>
+        </div>
+
+
+
+
+        <div class="element pop   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/15.jpg" />
+
+            <h3 class="symbol">&nbsp;#15 Roy Lichtenstein&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;658 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element sura  " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/16.jpg" />
+
+            <h3 class="symbol">&nbsp;#16 Mark Rothko&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;344 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element surr   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/17.jpg" />
+
+            <h3 class="symbol">&nbsp;#17 Joan Miró&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;311 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element con   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/18.jpg" />
+
+            <h3 class="symbol">&nbsp;#18 Damien Hirst&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;310 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element surr  " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/19.jpg" />
+
+            <h3 class="symbol">&nbsp;#19 Alex. Calder&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;309 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element post-transition metal   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/20.jpg" />
+
+            <h3 class="symbol">&nbsp;#20 Lucio Fontana&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;290 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/21.jpg" />
+
+            <h3 class="symbol">&nbsp;#21 Lu Yan Shao&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;282 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element surr  " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/22.jpg" />
+
+            <h3 class="symbol">&nbsp;#22 Marc Chagall&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;272 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/23.jpg" />
+
+            <h3 class="symbol">&nbsp;#23 Zao Wou-Ki&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;268 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/24.jpg" />
+
+            <h3 class="symbol">&nbsp;#24 Huang Zhou&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;265 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element pop   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/25.jpg" />
+
+            <h3 class="symbol">&nbsp;#25 Yves Klein&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;260 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element fauv   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/26.jpg" />
+
+            <h3 class="symbol">&nbsp;#26 Fernand Léger&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;249 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/27.jpg" />
+
+            <h3 class="symbol">&nbsp;#27 Huang Binhong&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;236 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element exp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/28.jpg" />
+
+            <h3 class="symbol">&nbsp;#28 Edvard Munch&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;231 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element con   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/29.jpg" />
+
+            <h3 class="symbol">&nbsp;#29 Jeff Koons&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;229 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element imp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/30.jpg" />
+
+            <h3 class="symbol">&nbsp;#30 Edgar Degas&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;215 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element sura   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/31.jpg" />
+
+            <h3 class="symbol">&nbsp;#31 Willem De Kooning&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;214 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element imp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/32.jpg" />
+
+            <h3 class="symbol">&nbsp;#32 Auguste Renoir&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;213 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/33.jpg" />
+
+            <h3 class="symbol">&nbsp;#33 Wu Changshuo&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;213 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/34.jpg" />
+
+            <h3 class="symbol">&nbsp;#34 Lin Feng Mian&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;210 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element surr   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/35.jpg" />
+
+            <h3 class="symbol">&nbsp;#35 Henry Moore&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;204 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element surr   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/36.jpg" />
+
+            <h3 class="symbol">&nbsp;#36 René Magritte&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;203 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element post-transition metal   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/37.jpg" />
+
+            <h3 class="symbol">&nbsp;#37 Zhu Da&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;188 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element imp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/38.jpg" />
+
+            <h3 class="symbol">&nbsp;#38 Amedeo Modigliani&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;180 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/39.jpg" />
+
+            <h3 class="symbol">&nbsp;#39 Fan Zeng&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;177 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/40.jpg" />
+
+            <h3 class="symbol">&nbsp;#40 Zeng Fanzhi&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;161 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element exp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/41.jpg" />
+
+            <h3 class="symbol">&nbsp;#41 Egon Schiele&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;143 millions d'euross&nbsp;</h2>
+        </div>
+
+        <div class="element  " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/42.jpg" />
+
+            <h3 class="symbol">&nbsp;#42 Cy Twombly&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;140 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element exp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/43.JPG" />
+
+            <h3 class="symbol">&nbsp;#43 Vassily Kandinsky&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;138 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element con   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/44.jpg" />
+
+            <h3 class="symbol">&nbsp;#44 Richard Prince&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;137 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element fauv   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/45.jpg" />
+
+            <h3 class="symbol">&nbsp;#45 Kees Van Dongen&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;136 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element post-transition metal   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/46.jpg" />
+
+            <h3 class="symbol">&nbsp;#46 Lucian Freud&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;130 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element chi   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/47.jpg" />
+
+            <h3 class="symbol">&nbsp;#47 Xie Zhiliu&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;129 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element post-transition metal   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/48.jpg" />
+
+            <h3 class="symbol">&nbsp;#48 Kees Van Dongen&nbsp;</h3>
+            <p class="name">Auguste Rodin</p>
+            <h2 class="weight">&nbsp;128 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element surr   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/49.jpg" />
+
+            <h3 class="symbol">&nbsp;#49 Salvador Dali&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;126 millions d'euros&nbsp;</h2>
+        </div>
+
+        <div class="element imp   " data-symbol="Bi" data-category="post-transition">
+            <p class="number">83</p>
+            <img class="photo" src="img/50.jpg" />
+
+            <h3 class="symbol">&nbsp;#50 Camille Pissarro&nbsp;</h3>
+            <p class="name">Bismuth</p>
+            <h2 class="weight">&nbsp;125 millions d'euros&nbsp;</h2>
+        </div>
+
+    </div>
+    <!-- #container -->
+
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/fake-element.js"></script>
+    <script>
+    $(function() {
+
+        var $container = $('#container');
+
+
+
+
+        $container.isotope({
+            itemSelector: '.element',
+            // disable resizing
+            resizable: false,
+            // set columnWidth to a percentage of container width
+            masonry: {
+                columnWidth: $container.width() / 5
+            },
+            getSortData: {
+                symbol: function($elem) {
+                    return $elem.attr('data-symbol');
+                },
+                category: function($elem) {
+                    return $elem.attr('data-category');
+                },
+                number: function($elem) {
+                    return parseInt($elem.find('.number').text(), 10);
+                },
+                weight: function($elem) {
+                    return parseFloat($elem.find('.weight').text().replace(/[\(\)]/g, ''));
+                },
+                name: function($elem) {
+                    return $elem.find('.name').text();
+                }
+            }
+        });
+
+        // update columnWidth on window resize
+        $(window).smartresize(function() {
+            $container.isotope({
+                // set columnWidth to a percentage of container width
+                masonry: {
+                    columnWidth: $container.width() / 5
+                }
+            });
+        });
+
+
+        var $optionSets = $('#options .option-set'),
+            $optionLinks = $optionSets.find('a');
+
+        $optionLinks.click(function() {
+            var $this = $(this);
+            // don't proceed if already selected
+            if ($this.hasClass('selected')) {
+                return false;
+            }
+            var $optionSet = $this.parents('.option-set');
+            $optionSet.find('.selected').removeClass('selected');
+            $this.addClass('selected');
+
+            // make option object dynamically, i.e. { filter: '.my-filter-class' }
+            var options = {},
+                key = $optionSet.attr('data-option-key'),
+                value = $this.attr('data-option-value');
+            // parse 'false' as false boolean
+            value = value === 'false' ? false : value;
+            options[key] = value;
+            if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
+                // changes in layout modes need extra logic
+                changeLayoutMode($this, options)
+            } else {
+                // otherwise, apply new options
+                $container.isotope(options);
+            }
+
+            return false;
+        });
+
+
+
+        $('#insert a').click(function() {
+            var $newEls = $(fakeElement.getGroup());
+            $container.isotope('insert', $newEls);
+
+            return false;
+        });
+
+        $('#append a').click(function() {
+            var $newEls = $(fakeElement.getGroup());
+            $container.append($newEls).isotope('appended', $newEls);
+
+            return false;
+        });
+
+
+
+
+        var $sortBy = $('#sort-by');
+        $('#shuffle a').click(function() {
+            $container.isotope('shuffle');
+            $sortBy.find('.selected').removeClass('selected');
+            $sortBy.find('[data-option-value="random"]').addClass('selected');
+            return false;
+        });
+
+    });
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
